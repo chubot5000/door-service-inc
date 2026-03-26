@@ -41,7 +41,12 @@ ul { list-style: none; }
 .arrow-btn span { font-size: 14px; color: var(--text-muted); }
 
 /* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0; transition: background 0.3s, box-shadow 0.3s; }
+nav.scrolled { background: #fff; box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
+nav.scrolled .nav-logo svg path { fill: var(--dark-green); }
+nav.scrolled .nav-links a { color: var(--text); }
+nav.scrolled .nav-links a:hover { color: var(--dark-green); }
+nav.scrolled .nav-cta { background: var(--dark-green); color: #fff; }
 .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 17px; color: var(--cream); }
 .nav-logo svg { width: 24px; height: 24px; }
@@ -568,6 +573,16 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
 </footer>
 
 <script>
+// NAV SCROLL
+const nav = document.querySelector('nav');
+const hero = document.querySelector('.hero');
+function checkNav() {
+  const past = window.scrollY > hero.offsetHeight - 60;
+  nav.classList.toggle('scrolled', past);
+}
+window.addEventListener('scroll', checkNav, { passive: true });
+checkNav();
+
 // TAB SWITCHING
 document.getElementById('tabList').addEventListener('click', e => {
   const li = e.target.closest('li');
