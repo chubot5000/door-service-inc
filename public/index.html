@@ -15,7 +15,7 @@
   --dark-green-footer: #09342a;
   --text: #3b3b33;
   --text-muted: rgba(59,59,51,0.7);
-  --lime: #0167FF;
+  --lime: #DFFFAF;
   --dark-card: #21211c;
   --mid-bg: #edede2;
   --glass: rgba(248,248,243,0.3);
@@ -36,7 +36,7 @@ ul { list-style: none; }
 
 .arrow-btn { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
 .arrow-btn .circle { width: 40px; height: 40px; border-radius: 50%; background: var(--lime); display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
-.arrow-btn .circle svg { width: 16px; height: 16px; }
+.arrow-btn .circle svg { width: 16px; height: 16px; stroke: #000; }
 .arrow-btn:hover .circle { transform: scale(1.08); }
 .arrow-btn span { font-size: 14px; color: var(--text-muted); }
 
@@ -48,7 +48,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0;
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { color: rgba(248,248,243,0.8); font-size: 14px; font-weight: 400; transition: color 0.2s; }
 .nav-links a:hover { color: var(--cream); }
-.nav-cta { background: var(--lime); color: #fff; padding: 10px 24px; border-radius: 6px; font-size: 14px; font-weight: 500; transition: opacity 0.2s; }
+.nav-cta { background: var(--lime); color: #000; padding: 10px 24px; border-radius: 6px; font-size: 14px; font-weight: 500; transition: opacity 0.2s; }
 .nav-cta:hover { opacity: 0.9; }
 
 /* HERO */
@@ -62,7 +62,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0;
 .hero h1 { font-size: 48px; font-weight: 400; line-height: 1.12; letter-spacing: -1px; color: var(--cream); margin-bottom: 20px; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
 .hero-lead { color: rgba(248,248,243,0.85); font-size: 15px; line-height: 1.75; max-width: 600px; margin-bottom: 32px; text-shadow: 0 1px 8px rgba(0,0,0,0.2); }
 .hero-actions { display: flex; align-items: stretch; gap: 12px; }
-.hero-cta-bar { background: var(--lime); border-radius: 6px; height: 60px; display: flex; align-items: center; justify-content: center; padding: 0 36px; font-size: 14px; font-weight: 500; color: #fff; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
+.hero-cta-bar { background: var(--lime); border-radius: 6px; height: 60px; display: flex; align-items: center; justify-content: center; padding: 0 36px; font-size: 14px; font-weight: 500; color: #000; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
 .hero-cta-bar:hover { opacity: 0.9; }
 
 .speak-card { background: rgba(248,248,243,0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(248,248,243,0.15); border-radius: 6px; padding: 0 20px; height: 60px; display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
@@ -96,7 +96,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0;
 .eff-sub-card { background: var(--dark-card); border-radius: 6px; overflow: hidden; }
 .eff-sub-card img { height: 110px; object-fit: cover; width: 100%; }
 .eff-sub-card .label { padding: 10px 14px; color: var(--cream); font-size: 13px; }
-.eff-accent { background: var(--lime); border-radius: 6px; padding: 16px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: #fff; grid-column: 1 / -1; }
+.eff-accent { background: var(--lime); border-radius: 6px; padding: 16px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: #000; grid-column: 1 / -1; }
 .eff-accent .icon-circle { width: 32px; height: 32px; border-radius: 50%; background: rgba(59,59,51,0.1); display: flex; align-items: center; justify-content: center; font-size: 14px; }
 
 /* PURPOSE */
@@ -137,7 +137,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0;
 .tab-panel p { color: rgba(248,248,243,0.65); font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
 .btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(248,248,243,0.15); color: var(--cream); padding: 12px 24px; border-radius: 6px; font-size: 14px; transition: background 0.2s, border-color 0.2s; }
 .btn-outline:hover { background: rgba(248,248,243,0.05); border-color: rgba(248,248,243,0.3); }
-.svc-video { width: 340px; height: 420px; border-radius: 6px; background: url('https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&q=80') center/cover; position: relative; flex-shrink: 0; overflow: hidden; }
+.svc-video { width: 340px; height: 420px; border-radius: 6px; background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80') center/cover; position: relative; flex-shrink: 0; overflow: hidden; }
 .svc-video-overlay { position: absolute; inset: 0; background: rgba(9,52,43,0.4); display: flex; align-items: center; justify-content: center; }
 .svc-stat { text-align: center; color: var(--cream); }
 .svc-stat .num { font-size: 64px; font-weight: 300; line-height: 1; }
@@ -179,13 +179,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0;
 .res-card-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 28px; }
 .res-card-bottom span { font-size: 13px; color: var(--text-muted); }
 .res-card-bottom .rc-arrow { width: 36px; height: 36px; border-radius: 50%; background: var(--lime); display: flex; align-items: center; justify-content: center; }
+.rc-arrow svg { stroke: #000; }
 
 /* FOOTER */
 footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(--cream); }
 .footer-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); }
 .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 0.8fr; gap: 40px; margin-bottom: 72px; }
 .footer-top h5 { font-size: 22px; font-weight: 400; line-height: 1.45; margin-bottom: 28px; max-width: 340px; }
-.footer-cta { background: var(--lime); color: #fff; padding: 14px 28px; border-radius: 6px; font-size: 14px; font-weight: 500; display: inline-block; transition: opacity 0.2s; }
+.footer-cta { background: var(--lime); color: #000; padding: 14px 28px; border-radius: 6px; font-size: 14px; font-weight: 500; display: inline-block; transition: opacity 0.2s; }
 .footer-cta:hover { opacity: 0.9; }
 .footer-col-title { font-size: 13px; color: rgba(248,248,243,0.35); margin-bottom: 20px; display: flex; gap: 6px; }
 .footer-links li { margin-bottom: 12px; }
@@ -234,8 +235,7 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="2" width="18" height="20" rx="2"/><path d="M9 22V12h6v10"/><circle cx="15" cy="8" r="1" fill="currentColor"/></svg>
-      Door Service Inc.
+      <svg viewBox="0 0 2424 376" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:28px;width:auto"><path d="M376.014 306V94.1322H432.783C500.69 94.1322 551.755 134.061 551.755 200.066C551.755 267.158 499.875 305.728 432.783 305.728H402.633V306H376.014ZM402.633 280.467H436.586C489.01 280.467 524.864 247.872 524.864 200.066C524.864 152.26 489.01 119.665 436.586 119.665H402.633V280.467ZM648.144 308.445C603.869 308.445 569.101 275.306 569.101 230.488C569.101 187.028 602.511 152.26 648.144 152.26C693.506 152.26 726.644 187.028 726.644 230.488C726.644 274.491 693.234 308.445 648.144 308.445ZM648.144 285.085C678.023 285.085 701.383 261.182 701.383 230.488C701.383 200.338 678.023 175.62 648.144 175.62C617.994 175.62 594.362 200.338 594.362 230.488C594.362 261.182 617.994 285.085 648.144 285.085ZM819.236 308.445C774.961 308.445 740.193 275.306 740.193 230.488C740.193 187.028 773.603 152.26 819.236 152.26C864.598 152.26 897.736 187.028 897.736 230.488C897.736 274.491 864.326 308.445 819.236 308.445ZM819.236 285.085C849.115 285.085 872.475 261.182 872.475 230.488C872.475 200.338 849.115 175.62 819.236 175.62C789.086 175.62 765.455 200.338 765.455 230.488C765.455 261.182 789.086 285.085 819.236 285.085ZM920.521 306V154.705H943.066L944.424 178.064L945.239 178.336C951.758 163.397 965.339 154.705 986.254 154.705H988.155V180.237H981.908C958.277 180.237 946.325 197.078 946.325 225.327V306H920.521ZM1133.47 308.445C1095.17 308.445 1068.01 286.986 1061.76 252.49L1087.84 246.514C1091.91 271.232 1111.2 284.27 1134.02 284.27C1157.1 284.27 1176.66 270.417 1176.66 248.144C1176.66 228.044 1161.18 219.08 1141.08 211.746L1108.76 200.609C1082.14 191.374 1067.2 173.99 1067.2 149.001C1067.2 121.838 1089.2 91.6876 1131.57 91.6876C1172.04 91.6876 1194.59 115.319 1198.66 143.84L1172.59 149.001C1170.69 128.085 1155.47 115.591 1132.66 115.591C1110.38 115.591 1093.82 128.9 1093.82 147.099C1093.82 163.125 1103.87 172.36 1121.79 178.608L1151.4 189.201C1185.08 200.881 1203.55 218.808 1203.55 247.601C1203.55 276.936 1183.18 308.445 1133.47 308.445ZM1298.28 308.445C1253.19 308.445 1220.05 274.763 1220.05 230.76C1220.05 187.3 1251.56 152.26 1297.19 152.26C1342.01 152.26 1374.33 186.756 1371.34 237.55H1245.85C1249.38 270.689 1274.37 285.085 1298.55 285.085C1318.65 285.085 1335.22 275.035 1343.91 259.009L1367.27 267.158C1355.59 292.69 1329.78 308.445 1298.28 308.445ZM1246.39 217.178H1346.35C1342.82 194.362 1323.81 175.62 1297.19 175.62C1271.66 175.62 1250.74 193.819 1246.39 217.178ZM1394.01 306V154.705H1416.55L1417.91 178.064L1418.73 178.336C1425.25 163.397 1438.83 154.705 1459.74 154.705H1461.64V180.237H1455.4C1431.76 180.237 1419.81 197.078 1419.81 225.327V306H1394.01ZM1518.71 306L1470.91 154.705H1498.88L1535.82 278.837L1573.31 154.705H1601.01L1552.67 306H1518.71ZM1621.08 306V154.705H1646.88V306H1621.08ZM1621.08 138.679V94.1322H1647.15V138.679H1621.08ZM1748.96 308.445C1706.05 308.445 1670.46 276.121 1670.19 230.76C1669.92 186.756 1704.15 152.26 1748.15 152.26C1783.19 152.26 1810.62 171.545 1820.13 201.153L1797.31 208.486C1791.61 190.016 1773.14 175.62 1749.51 175.62C1720.71 175.62 1695.45 198.98 1695.45 230.488C1695.45 260.91 1720.17 285.085 1749.78 285.085C1774.22 285.085 1792.42 272.047 1798.67 252.761L1821.22 260.91C1812.8 285.9 1788.35 308.445 1748.96 308.445ZM1911.02 308.445C1865.93 308.445 1832.8 274.763 1832.8 230.76C1832.8 187.3 1864.3 152.26 1909.94 152.26C1954.76 152.26 1987.08 186.756 1984.09 237.55H1858.6C1862.13 270.689 1887.12 285.085 1911.3 285.085C1931.4 285.085 1947.96 275.035 1956.66 259.009L1980.02 267.158C1968.34 292.69 1942.53 308.445 1911.02 308.445ZM1859.14 217.178H1959.1C1955.57 194.362 1936.56 175.62 1909.94 175.62C1884.4 175.62 1863.49 193.819 1859.14 217.178ZM2067.57 306V94.1322H2094.19V306H2067.57ZM2129.31 306V154.705H2152.13L2152.94 176.706H2154.03C2160.28 165.298 2173.86 152.26 2196.95 152.26C2224.11 152.26 2246.66 171.002 2246.66 211.746V306H2220.58V215.277C2220.58 185.942 2207 175.891 2188.8 175.891C2167.88 175.891 2155.12 193.819 2155.12 217.45V306H2129.31ZM2346.33 308.445C2303.41 308.445 2267.83 276.121 2267.56 230.76C2267.28 186.756 2301.51 152.26 2345.51 152.26C2380.55 152.26 2407.99 171.545 2417.49 201.153L2394.68 208.486C2388.97 190.016 2370.5 175.62 2346.87 175.62C2318.08 175.62 2292.82 198.98 2292.82 230.488C2292.82 260.91 2317.53 285.085 2347.14 285.085C2371.59 285.085 2389.79 272.047 2396.03 252.761L2418.58 260.91C2410.16 285.9 2385.71 308.445 2346.33 308.445Z" fill="white"/> <path d="M136 321L214 357V83L136 111V321Z" fill="white"/> <path d="M0 322.5L78 358.5V0L0 28V322.5Z" fill="white"/> <path d="M78 81L136 111L214 83L78 0V81Z" fill="#B2B2B2"/></svg>
     </a>
     <div class="nav-links">
       <a href="#">Commercial Entrances</a>
@@ -262,7 +262,7 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
         <div class="hero-actions">
           <a href="#" class="hero-cta-bar">Get a Free Estimate</a>
           <a href="tel:3143321661" class="speak-card">
-            <div class="phone-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div class="phone-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
             <div class="speak-meta">
               <span class="dates">Emergency service available</span>
               <span class="speak-link-text">(314) 332-1661</span>
@@ -306,17 +306,17 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
         </div>
       </div>
       <div class="eff-images">
-        <img class="main-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Modern commercial building entrance">
+        <img class="main-img" src="https://images.unsplash.com/photo-1555636222-cae831e670b3?w=800&q=80" alt="Commercial glass entrance doors">
         <div class="eff-sub-card">
-          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&q=80" alt="Aluminum entrance">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80" alt="Aluminum storefront entrance">
           <div class="label">Aluminum Entrances</div>
         </div>
         <div class="eff-sub-card">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=80" alt="Revolving door building">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" alt="Revolving door entrance">
           <div class="label">Revolving Doors</div>
         </div>
         <div class="eff-accent">
-          <div class="icon-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/></svg></div>
+          <div class="icon-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/></svg></div>
           Next-Day Service on All Calls
         </div>
       </div>
@@ -329,7 +329,7 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
   <div class="container">
     <div class="purpose-grid">
       <div class="purpose-left">
-        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80" alt="Door hardware closeup">
+        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80" alt="Commercial door hardware and lock system">
       </div>
       <div class="purpose-right">
         <div class="tag"><span class="bracket">[</span> Hardware & security <span class="bracket">]</span></div>
@@ -447,21 +447,21 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
     </div>
     <div class="stories-grid">
       <a href="#" class="story-card">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Office tower entrance">
+        <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=600&q=80" alt="Commercial building entrance doors">
         <div class="story-info">
           <div><div class="name">Corporate Office Tower</div><div class="loc">Clayton, MO</div></div>
           <div class="arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></div>
         </div>
       </a>
       <a href="#" class="story-card">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Hospital entrance">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Medical facility entrance">
         <div class="story-info">
           <div><div class="name">Regional Medical Center</div><div class="loc">Belleville, IL</div></div>
           <div class="arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></div>
         </div>
       </a>
       <a href="#" class="story-card">
-        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80" alt="Retail storefront">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Retail storefront glass doors">
         <div class="story-info">
           <div><div class="name">Retail Shopping Center</div><div class="loc">Chesterfield, MO</div></div>
           <div class="arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></div>
