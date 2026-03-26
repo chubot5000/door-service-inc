@@ -148,6 +148,22 @@ nav.scrolled .nav-cta { background: var(--dark-green); color: #fff; }
 .svc-image-overlay { position: absolute; bottom: 20px; left: 20px; background: rgba(248,248,243,0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 24px; padding: 8px 18px; display: flex; align-items: center; gap: 10px; color: var(--cream); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; }
 .svc-image-overlay .play-tri { width: 0; height: 0; border-left: 8px solid var(--cream); border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
 
+/* SUCCESS STORIES */
+.success { padding: 120px 0; }
+.success-header { text-align: center; margin-bottom: 72px; }
+.success-header .tag { justify-content: center; margin-bottom: 16px; }
+.success-header h2 { font-size: 51px; font-weight: 400; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; }
+.success-header p { font-size: 15px; color: var(--text-muted); line-height: 1.8; max-width: 580px; margin: 0 auto 28px; }
+.success-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.success-card { border-radius: 8px; overflow: hidden; position: relative; aspect-ratio: 3/4; background: #ddd; }
+.success-card img { width: 100%; height: 100%; object-fit: cover; }
+.success-card-info { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 80px 24px 24px; }
+.success-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.success-card-meta { font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 1px; text-transform: uppercase; font-family: monospace; line-height: 1.6; }
+.success-card-arrow { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.success-card-arrow svg { width: 14px; height: 14px; stroke: rgba(255,255,255,0.7); }
+.success-card-logo { font-size: 20px; font-weight: 600; color: #fff; letter-spacing: 0.5px; }
+
 /* CUSTOMERS */
 .customers { padding: 144px 0; }
 .cust-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 60px; }
@@ -223,7 +239,7 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
   .hero h1, .services h1 { font-size: 32px; }
   h2 { font-size: 28px !important; }
   .nav-links { display: none; }
-  .stories-grid, .res-grid { grid-template-columns: 1fr; }
+  .success-grid, .stories-grid, .res-grid { grid-template-columns: 1fr; }
   .feat-grid { grid-template-columns: 1fr; }
   .eff-images { grid-template-columns: 1fr; }
   .cust-header { flex-direction: column; gap: 24px; }
@@ -428,6 +444,53 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
           PLAY VIDEO 3:14
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section class="success">
+  <div class="container">
+    <div class="success-header">
+      <div class="tag"><span class="bracket">[</span> Customers <span class="bracket">]</span></div>
+      <h2>Success Stories</h2>
+      <p>These customer stories showcase how businesses across the Midwest trusted Door Service Inc. to solve complex entrance challenges — and came back for every project since.</p>
+      <div class="arrow-btn" style="justify-content:center">
+        <div class="circle"><svg viewBox="0 0 16 16" fill="none" stroke="#000" stroke-width="1.5"><path d="M3 8h10M10 5l3 3-3 3"/></svg></div>
+        <span>Meet our customers</span>
+      </div>
+    </div>
+    <div class="success-grid">
+      <a href="#" class="success-card">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80" alt="Enterprise Plaza lobby entrance">
+        <div class="success-card-info">
+          <div class="success-card-top">
+            <div class="success-card-meta">Enterprise Plaza<br>Clayton, MO</div>
+            <div class="success-card-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke-width="1.5"/></svg></div>
+          </div>
+          <div class="success-card-logo">Enterprise Plaza</div>
+        </div>
+      </a>
+      <a href="#" class="success-card">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Mercy Hospital automatic doors">
+        <div class="success-card-info">
+          <div class="success-card-top">
+            <div class="success-card-meta">Mercy Hospital<br>St. Louis, MO</div>
+            <div class="success-card-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke-width="1.5"/></svg></div>
+          </div>
+          <div class="success-card-logo">Mercy Hospital</div>
+        </div>
+      </a>
+      <a href="#" class="success-card">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Galleria retail storefront doors">
+        <div class="success-card-info">
+          <div class="success-card-top">
+            <div class="success-card-meta">St. Louis Galleria<br>Richmond Heights, MO</div>
+            <div class="success-card-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke-width="1.5"/></svg></div>
+          </div>
+          <div class="success-card-logo">St. Louis Galleria</div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
