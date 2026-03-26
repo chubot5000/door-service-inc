@@ -121,27 +121,27 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0;
 .feat-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
 
 /* SERVICES */
-.services { background: var(--dark-green); padding: 144px 0; }
+.services { background: var(--dark-green); padding: 120px 0; }
 .services-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); color: var(--cream); }
-.services .tag { color: rgba(248,248,243,0.5); }
+.services .tag { color: rgba(248,248,243,0.5); margin-bottom: 48px; }
 .services .tag .bracket { opacity: 0.25; }
-.services h1 { font-size: 64px; font-weight: 400; line-height: 1.05; letter-spacing: -1.28px; color: var(--cream); margin: 16px 0 48px; }
-.svc-grid { display: grid; grid-template-columns: 280px 1fr; gap: 48px; }
-.tab-list li { padding: 16px 0; font-size: 16px; cursor: pointer; border-bottom: 1px solid rgba(248,248,243,0.08); color: rgba(248,248,243,0.35); transition: color 0.25s; }
+.svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.svc-left { display: flex; flex-direction: column; }
+.tab-list li { padding: 20px 0; font-size: 28px; font-weight: 400; cursor: pointer; border-top: 1px solid rgba(248,248,243,0.12); color: rgba(248,248,243,0.25); transition: color 0.3s; letter-spacing: -0.3px; }
+.tab-list li:last-child { border-bottom: 1px solid rgba(248,248,243,0.12); }
 .tab-list li.active { color: var(--cream); font-weight: 500; }
-.tab-list li:hover { color: rgba(248,248,243,0.7); }
-.svc-content { display: flex; gap: 40px; }
-.svc-text { flex: 1; }
+.tab-list li:hover { color: rgba(248,248,243,0.6); }
+.svc-text { margin-top: 48px; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
-.tab-panel p { color: rgba(248,248,243,0.65); font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
+.tab-panel p { color: rgba(248,248,243,0.6); font-size: 15px; line-height: 1.85; margin-bottom: 32px; max-width: 520px; }
+.btn-svc { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--lime); color: #000; background: var(--lime); padding: 14px 28px; border-radius: 6px; font-size: 13px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; transition: opacity 0.2s; cursor: pointer; }
+.btn-svc:hover { opacity: 0.9; }
 .btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(248,248,243,0.15); color: var(--cream); padding: 12px 24px; border-radius: 6px; font-size: 14px; transition: background 0.2s, border-color 0.2s; }
 .btn-outline:hover { background: rgba(248,248,243,0.05); border-color: rgba(248,248,243,0.3); }
-.svc-video { width: 340px; height: 420px; border-radius: 6px; background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80') center/cover; position: relative; flex-shrink: 0; overflow: hidden; }
-.svc-video-overlay { position: absolute; inset: 0; background: rgba(9,52,43,0.4); display: flex; align-items: center; justify-content: center; }
-.svc-stat { text-align: center; color: var(--cream); }
-.svc-stat .num { font-size: 64px; font-weight: 300; line-height: 1; }
-.svc-stat .label { font-size: 14px; opacity: 0.7; margin-top: 8px; }
+.svc-image { width: 100%; aspect-ratio: 4/3; border-radius: 10px; background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80') center/cover; position: relative; overflow: hidden; margin-top: 48px; }
+.svc-image-overlay { position: absolute; bottom: 20px; left: 20px; background: rgba(248,248,243,0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 24px; padding: 8px 18px; display: flex; align-items: center; gap: 10px; color: var(--cream); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; }
+.svc-image-overlay .play-tri { width: 0; height: 0; border-left: 8px solid var(--cream); border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
 
 /* CUSTOMERS */
 .customers { padding: 144px 0; }
@@ -204,8 +204,7 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
 @media (max-width: 1024px) {
   .eff-grid, .purpose-grid, .svc-grid, .footer-top, .res-header { grid-template-columns: 1fr; }
   .feat-grid { grid-template-columns: repeat(2, 1fr); }
-  .svc-content { flex-direction: column; }
-  .svc-video { width: 100%; height: 280px; }
+  .svc-image { margin-top: 0; }
   .hero h1, .services h1 { font-size: 44px; }
   h2 { font-size: 38px !important; }
 }
@@ -386,45 +385,42 @@ footer { background: var(--dark-green-footer); padding: 96px 0 72px; color: var(
 <section class="services">
   <div class="services-inner">
     <div class="tag"><span class="bracket">[</span> Our specialties <span class="bracket">]</span></div>
-    <h1>Doors for Every Application.</h1>
     <div class="svc-grid">
-      <ul class="tab-list" id="tabList">
-        <li class="active" data-tab="0">Hollow Metal Doors</li>
-        <li data-tab="1">Automatic Doors</li>
-        <li data-tab="2">Aluminum Entrances</li>
-        <li data-tab="3">Revolving Doors</li>
-        <li data-tab="4">Wood Doors</li>
-      </ul>
-      <div class="svc-content">
+      <div class="svc-left">
+        <ul class="tab-list" id="tabList">
+          <li class="active" data-tab="0">Hollow Metal Doors</li>
+          <li data-tab="1">Automatic Doors</li>
+          <li data-tab="2">Aluminum Entrances</li>
+          <li data-tab="3">Revolving Doors</li>
+          <li data-tab="4">Wood Doors</li>
+        </ul>
         <div class="svc-text">
           <div class="tab-panel active" data-tab="0">
             <p>Heavy-duty hollow metal doors built for security, fire resistance, and durability. Ideal for commercial, industrial, and institutional buildings requiring maximum protection and long-term performance.</p>
-            <a href="#" class="btn-outline">Request a quote →</a>
+            <a href="#" class="btn-svc">More Information</a>
           </div>
           <div class="tab-panel" data-tab="1">
-            <p>Sliding, swinging, and ADA-compliant automatic door systems for high-traffic entrances. We install, service, and maintain all major brands with factory-trained technicians and preventive maintenance programs.</p>
-            <a href="#" class="btn-outline">Request a quote →</a>
+            <p>Sliding, swinging, and ADA-compliant automatic door systems for high-traffic entrances. We install, service, and maintain all major brands with factory-trained technicians.</p>
+            <a href="#" class="btn-svc">More Information</a>
           </div>
           <div class="tab-panel" data-tab="2">
             <p>Sleek, modern aluminum door and entrance systems for storefronts, office buildings, and commercial facilities. Custom-fitted to your specifications with professional installation.</p>
-            <a href="#" class="btn-outline">Request a quote →</a>
+            <a href="#" class="btn-svc">More Information</a>
           </div>
           <div class="tab-panel" data-tab="3">
             <p>Elegant revolving door systems that manage traffic flow, conserve energy, and make a statement at your building entrance. Full installation and ongoing service available.</p>
-            <a href="#" class="btn-outline">Request a quote →</a>
+            <a href="#" class="btn-svc">More Information</a>
           </div>
           <div class="tab-panel" data-tab="4">
-            <p>Custom wood doors that combine aesthetic warmth with commercial-grade performance. Available in a wide range of species, finishes, and configurations for any interior or exterior application.</p>
-            <a href="#" class="btn-outline">Request a quote →</a>
+            <p>Custom wood doors that combine aesthetic warmth with commercial-grade performance. Available in a wide range of species, finishes, and configurations.</p>
+            <a href="#" class="btn-svc">More Information</a>
           </div>
         </div>
-        <div class="svc-video">
-          <div class="svc-video-overlay">
-            <div class="svc-stat">
-              <div class="num">40+</div>
-              <div class="label">Years Serving the Midwest</div>
-            </div>
-          </div>
+      </div>
+      <div class="svc-image" id="svcImage">
+        <div class="svc-image-overlay">
+          <div class="play-tri"></div>
+          PLAY VIDEO 3:14
         </div>
       </div>
     </div>
